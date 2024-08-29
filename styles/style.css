@@ -2,4 +2,383 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  padding: 20px;
+  font-family: 'IBM Plex mono';
+  font-size: 18px;
+  font-style: normal;
+  color: var(--text-color);
+  background-image: var(--bg-image);
+  background-attachment: fixed;
+  
+}
+
+@media (width < 768px) {
+  
+  .page {
+    padding: 10px;
+  }
+}
+
+.header {
+  display: grid;
+  grid-template-rows: auto max-content auto;
+  align-items: center;
+  padding: 20px;
+}
+
+.decorative-rec-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 2px 10px 0 0;
+  color: var(--rec-decoration-color);
+  inset-inline-end: 0;
+  inset-block-start: 0;
+}
+
+.decorative-rec-icon::after {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 0 5px 4px var(--rec-decoration-color);
+  background-color: var(--rec-decoration-color);
+  inline-size: 7px;
+  block-size: 7px;
+}
+
+.decorated-zone {
+  position: relative;
+  min-block-size: 94.7vh;
+}
+
+@media (width < 1024px) {
+
+  .decorated-zone {
+    min-block-size: 96vh;
+  }
+}
+
+@media (width < 768px) {
+
+  .decorated-zone {
+    min-block-size: 97vh;
+  }
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  border-top: 1px solid var(--decorative-bracket-color);
+  border-right: 1px solid var(--decorative-bracket-color);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid var(--decorative-bracket-color);
+  border-left: 1px solid var(--decorative-bracket-color);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-block-end: 0;
+}
+
+.header__theme-menu {
+  justify-self: center;
+  align-self: self-start;
+  margin: 0;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  color: var(--menu-color);
+}
+
+@media (width < 1024px) {
+
+  .header__theme-menu {
+    justify-self: end;
+    margin: 10px 0 0;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+    padding-top: 146px;
+    gap: 10px;
+  }
+
+}
+
+@media (width < 768px) {
+
+  .header__theme-menu {
+    margin: 5px 0 0;
+  }
+
+  .header__theme-menu-list {
+    padding-top: 40px;
+    gap: 13px;
+  }
+}
+
+.header__theme-menu-button {
+  border: none;
+  padding: 0 13px;
+  outline: 1px solid transparent;
+  text-transform: lowercase;
+  transition-duration: 0.2s;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--button-hover-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+  outline: none;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--menu-color);
+  pointer-events: none;
+}
+
+.header__title {
+  margin: 45px 0 0 -20px;
+  color: var(--accent-title-color);
+  font-size: 157px;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+@media (width < 1024px) {
+
+  .header__title {
+    margin: 20px 0 0 -20px;
+  }
+}
+
+@media (width < 375px) {
+
+  .header__title {
+    align-self: self-start;
+    margin: 15px 0 0;
+  }
+}
+
+.accent_shadow_text{
+  color: var(--accent-title-color);
+  font-size: var(--accent-desktop);
+}
+
+@media (max-width: 375px) {
+
+  .accent_shadow_text {
+    font-size: var(--accent-mobile);
+  }
+}
+
+.header__text {
+  justify-self: end;
+  margin: 0;
+  padding: 0;
+  max-inline-size: 47.94%;
+  font-weight: 700;
+}
+
+@media (width < 1024px) {
+
+  .header__text {
+    margin: 0;
+    max-inline-size: 47.39%;
+  }
+}
+
+@media (width < 768px) {
+  
+  .header__text {
+    max-inline-size: 94.66%;
+  }
+}
+
+.header__text__background {
+  color: var(--accent-bg-color);
+  background-color: var(--accent-color);
+  font-size: 18px;
+}
+
+.why {
+  display: grid;
+  grid-template-columns: 30.76% 1fr;
+  column-gap: var(--gap);
+  margin: 81px 0 0;
+}
+
+@media (width < 1024px) {
+  
+  .why {
+    grid-template-columns: 30.72% 1fr;
+  }
+}
+
+@media (width < 768px) {
+
+  .why {
+    display: flex;
+    flex-direction: column;
+    margin: 49px 0 0;
+  }
+}
+
+.h2__title {
+  margin: 0 0 20px;
+  font-size: 18px;
+  color: var(--title-color);
+}
+
+.accent__link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.p-text {
+  margin: 10px 0 20px;
+}
+
+.what {
+  margin: 60px 0 0;
+}
+
+.what__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: var(--gap);
+}
+
+@media (width < 1024px) {
+
+  .what {
+    margin: 60px 0 0;
+  }
+
+  .what__title {
+    max-inline-size: 30.72%;
+  }
+}
+
+@media (width < 768px) {
+
+  .what {
+    margin: 50px 0 0;
+  }
+
+  .what__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.how {
+  display: grid;
+  grid-template-columns: 30.76% 1fr;
+  margin: 60px 0 0;
+  column-gap: var(--gap);
+}
+
+@media (width < 1024px) {
+
+  .how {
+    grid-template-columns: 30.72% 1fr;
+    margin: 80px 0 0;
+  }
+}
+
+@media (width < 768px) {
+
+  .how {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0 0;
+  }
+}
+
+.how__title__bg {
+  color: var(--accent-bg-color);
+  background-color: var(--accent-color);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.how__list-title {
+  margin: 0 0 20px;
+}
+
+.pictures__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 16px;
+  column-gap: var(--gap);
+  margin: 19px 0 0;
+}
+
+@media (width < 768px) {
+
+  .pictures__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px 0 0;
+  }
+}
+
+.pictures__list-items:nth-child(1) {
+  grid-column: 1 / span 2;
+}
+
+.pictures__list-items:nth-child(2) {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+.pictures__list-items:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2 / span 2;
+}
+
+.pictures__list-items:nth-child(5) {
+  grid-column: 2 / span 2;
+}
+
+.pictures__img {
+  object-fit: cover;
+  inline-size: 100%;
+}
+
+.pictures__img-column {
+  object-fit: cover;
+  block-size: 100%;
+}
+
+.footer {
+  display: grid;
+  margin: 60px 0 0;
+  padding: 20px;
+}
+
+.footer__text {
+  justify-self: center;
+  align-self: center;
+  text-shadow: 2px 2px 0 var(--accent-color);
+  font-weight: 700;
 }

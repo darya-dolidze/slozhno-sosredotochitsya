@@ -1,1 +1,1 @@
-https://github.com/darya-dolidze/slozhno-sosredotochitsya.git
+git@github.com:darya-dolidze/slozhno-sosredotochitsya.git

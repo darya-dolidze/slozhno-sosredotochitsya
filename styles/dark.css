@@ -1,12 +1,3 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-:root {
-  --bg-image: url(../images/cover-image-dark.png);
-}
-
 .page.theme_dark {
   --bg-image: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
@@ -16,5 +7,6 @@
   --decorative-bracket-color: #ff0070;
   --text-color: #f1b2ce;
   --menu-color: #ff0070;
+  --hover-color: #FF007066;
   --rec-decoration-color: #ff0070;
 }
